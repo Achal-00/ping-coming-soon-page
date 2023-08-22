@@ -40,8 +40,6 @@ p, h1, h2, h3, h4, h5, h6 {
     --white: hsl(0, 0%, 100%);
 }
 
-/* For portrait phones */
-
 .container {
     min-height: 100dvh;
     width: 90%;
@@ -137,8 +135,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .socials div {
-    width: 40px;
-    height: 40px;
+    width: 2em;
+    height: 2em;
     border-radius: 100%;
     display: grid;
     align-content: center;
@@ -155,25 +153,71 @@ i {
     color: var(--grey);
 }
 
+@media (width >= 35em) and (height <= 27em) and (orientation: landscape) {
+    .container {
+        padding: 5% 0%;
+    }
 
+    .header {
+        padding: 3% 3%;
+    }
 
+    .newsletter {
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+    }
 
-/* For landscape phones */
+    .newsletter input, .newsletter button {
+        height: 100%;
+    }
 
-@media (width >= 35em) and (height <= 27em) and (orientation: landscape) {}
+    .footer {
+        padding-top: 5%;
+    }
+}
 
+@media (width >= 44.5em) and (orientation: portrait) {
+    .container {
+        width: 80%;
+    }
 
-/* For portrait tablets */
+    .header {
+        font-size: min(4dvw, 4dvh);
+    }
 
-@media (width >= 44.5em) and (orientation: portrait) {}
+    .logo-holder {
+        transform: scale(1);
+    }
+}
 
+@media (width >= 62em) and (height <= 64em) and (orientation: landscape) {
+    .container {
+        padding: 5% 0%;
+        width: 70%;
+    }
 
-/* For landscape tablets */
+    .header {
+        padding: 3% 3%;
+        font-size: min(3dvw, 3dvh);
+    }
 
-@media (width >= 62em) and (height <= 64em) and (orientation: landscape) {}
+    .logo-holder {
+        transform: scale(1);
+    }
 
+    .newsletter {
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+    }
 
-/* laptops 1200px and up */
+    .newsletter input, .newsletter button {
+        height: 100%;
+    }
+
+    .footer {
+        padding-top: 5%;
+    }
+}
 
 @media (width >= 75em) {
     .container {
@@ -183,6 +227,7 @@ i {
 
     .header {
         padding: 3% 3%;
+        font-size: min(4dvw, 4dvh);
     }
 
     .logo-holder {
@@ -211,11 +256,6 @@ i {
         padding-top: 5%;
     }
 
-    .socials div {
-        width: 60px;
-        height: 60px;
-    }
-
     .footer p {
         font-size: 50%;
     }
@@ -241,7 +281,8 @@ i {
     }
 }
 
-
-/* desktops 2500px and up */
-
-@media (width >= 156.25em) {}
+@media (width >= 156.25em) {
+    .logo-holder {
+        transform: scale(2);
+    }
+}
