@@ -11,9 +11,13 @@ const Header = () => {
         <p>Subscribe and get notified</p>
       </div>
       <div className="newsletter">
-        <input type="email" placeholder="Your email address..." />
-        <p>Please provide a valid email address</p>
-        <button>Notify Me</button>
+        <div className="input">
+          <input type="text" placeholder="Your email address..." />
+          <p>Please provide a valid email address</p>
+        </div>
+        <div className="btn">
+          <button>Notify Me</button>
+        </div>
       </div>
     </section>
   );

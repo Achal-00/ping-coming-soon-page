@@ -1,10 +1,7 @@
 const HeroSection = () => {
   return (
-    <section className="image-holder">
-      <img
-        src="images/illustration-dashboard.png"
-        alt="illustration dashboard"
-      />
+    <section className="hero-image">
+      <img src="images/illustration-dashboard.png" alt="hero image" />
     </section>
   );
 };

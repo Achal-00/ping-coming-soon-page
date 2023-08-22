@@ -42,25 +42,28 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* For portrait phones */
 
-body {
-    min-height: 100dvh;
-    display: flex;
-    align-items: center;
-}
-
 .container {
+    min-height: 100dvh;
     width: 90%;
+    padding: 10% 0%;
+    margin: 0 auto;
     display: grid;
-    gap: 2em;
     text-align: center;
-    font-size: min(5dvw, 5dvh);
-    margin: auto;
 }
 
 .header {
     display: flex;
     flex-direction: column;
-    row-gap: 2em;
+    gap: 5dvh;
+    font-size: min(5dvw, 5dvh);
+    padding: 0% 3%;
+}
+
+.logo-holder {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    transform: scale(0.7);
 }
 
 .heading h1 {
@@ -75,41 +78,35 @@ body {
 
 .heading p {
     font-size: 70%;
-    color: var(--very-dark-blue);
-}
-
-.logo-holder {
-    display: grid;
-    align-content: center;
-    justify-items: center;
-    transform: scale(0.7);
 }
 
 .newsletter {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 0.5em;
+    font-size: 80%;
 }
 
 .newsletter input, .newsletter button {
-    height: min(12dvw, 12dvh);
+    width: 100%;
     border-radius: 50px;
+    padding: 3%;
     border: none;
-    font-size: 80%;
 }
 
 .newsletter input {
     border: thin solid var(--pale-blue);
-    padding-left: 2em;
     outline: none;
+    padding-left: 10%;
 }
 
 ::placeholder {
-    color: var(--pale-blue);
+    color: var(--grey);
 }
 
 .newsletter p {
     color: var(--light-red);
-    font-size: 80%;
+    font-size: 90%;
     font-style: italic;
     display: none;
 }
@@ -117,44 +114,53 @@ body {
 .newsletter button {
     background: var(--blue);
     color: var(--white);
-    font-weight: 600;
+    box-shadow: 0px 5px 10px var(--pale-blue);
+}
+
+.hero-image {
+    align-self: center;
 }
 
 .footer {
-    display: grid;
-    align-content: end;
-    gap: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 3dvh;
+    font-size: min(4dvw, 4dvh);
+    justify-content: end;
 }
 
-.icon-holder {
+.socials {
+    color: var(--blue);
     display: flex;
     justify-content: center;
     gap: 1em;
-    color: var(--blue);
 }
 
-.common {
-    border: thin solid var(--pale-blue);
-    border-radius: 100%;
+.socials div {
     width: 40px;
     height: 40px;
+    border-radius: 100%;
     display: grid;
     align-content: center;
     justify-items: center;
+    border: thin solid var(--pale-blue);
+}
+
+i {
+    padding: 0.5em;
 }
 
 .footer p {
-    font-size: 70%;
+    font-size: 60%;
     color: var(--grey);
 }
 
+
+
+
 /* For landscape phones */
 
-@media (width >= 35em) and (height <= 27em) and (orientation: landscape) {
-    .container {
-        width: 60%;
-    }   
-}
+@media (width >= 35em) and (height <= 27em) and (orientation: landscape) {}
 
 
 /* For portrait tablets */
@@ -169,7 +175,71 @@ body {
 
 /* laptops 1200px and up */
 
-@media (width >= 75em) {}
+@media (width >= 75em) {
+    .container {
+        width: 60%;
+        padding: 5% 0%;
+    }
+
+    .header {
+        padding: 3% 3%;
+    }
+
+    .logo-holder {
+        transform: scale(1);
+    }
+
+    .heading p {
+        font-size: 50%;
+    }
+
+    .newsletter {
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        font-size: 50%;
+    }
+
+    .newsletter input, .newsletter button {
+        height: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+    }
+
+    .footer {
+        padding-top: 5%;
+    }
+
+    .socials div {
+        width: 60px;
+        height: 60px;
+    }
+
+    .footer p {
+        font-size: 50%;
+    }
+
+    .newsletter p {
+        text-align: left;
+        padding-left: 10%;
+    }
+
+    .newsletter button:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+
+    .socials div:hover {
+        color: var(--white);
+        cursor: pointer;
+        background: var(--blue);
+    }
+
+    .newsletter input:hover {
+        border: thin solid var(--very-dark-blue);
+    }
+}
 
 
 /* desktops 2500px and up */
