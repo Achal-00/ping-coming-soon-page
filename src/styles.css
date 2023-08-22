@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+:root {
+    --blue: hsl(223, 87%, 63%);
+    --pale-blue: hsl(223, 100%, 88%);
+    --light-red: hsl(354, 100%, 66%);
+    --grey: hsl(0, 0%, 59%);
+    --very-dark-blue: hsl(209, 33%, 12%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* For portrait phones */
+
+body {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    display: grid;
+    gap: 2em;
+    text-align: center;
+    font-size: min(5dvw, 5dvh);
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+}
+
+.heading h1 {
+    color: var(--grey);
+    font-weight: 300;
+}
+
+.heading span {
+    color: var(--very-dark-blue);
+    font-weight: 700;
+}
+
+.heading p {
+    font-size: 70%;
+    color: var(--very-dark-blue);
+}
+
+.logo-holder {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    transform: scale(0.7);
+}
+
+.newsletter {
+    display: grid;
+    gap: 0.5em;
+}
+
+.newsletter input, .newsletter button {
+    height: min(12dvw, 12dvh);
+    border-radius: 50px;
+    border: none;
+    font-size: 80%;
+}
+
+.newsletter input {
+    border: thin solid var(--pale-blue);
+    padding-left: 2em;
+    outline: none;
+}
+
+::placeholder {
+    color: var(--pale-blue);
+}
+
+.newsletter p {
+    color: var(--light-red);
+    font-size: 80%;
+    font-style: italic;
+    display: none;
+}
+
+.newsletter button {
+    background: var(--blue);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.footer {
+    display: grid;
+    align-content: end;
+    gap: 1em;
+}
+
+.icon-holder {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    color: var(--blue);
+}
+
+.common {
+    border: thin solid var(--pale-blue);
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+}
+
+.footer p {
+    font-size: 70%;
+    color: var(--grey);
+}
+
+/* For landscape phones */
+
+@media (width >= 35em) and (height <= 27em) and (orientation: landscape) {
+    .container {
+        width: 60%;
+    }   
+}
+
+
+/* For portrait tablets */
+
+@media (width >= 44.5em) and (orientation: portrait) {}
+
+
+/* For landscape tablets */
+
+@media (width >= 62em) and (height <= 64em) and (orientation: landscape) {}
+
+
+/* laptops 1200px and up */
+
+@media (width >= 75em) {}
+
+
+/* desktops 2500px and up */
+
+@media (width >= 156.25em) {}

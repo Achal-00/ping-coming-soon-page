@@ -1,0 +1,20 @@
+const Footer = () => {
+  return (
+    <section className="footer">
+      <div className="icon-holder">
+        <div className="common">
+          <i class="fa-brands fa-facebook-f"></i>
+        </div>
+        <div className="common">
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div className="common">
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+      <p>&copy; Copyright Ping. All rights reserved.</p>
+    </section>
+  );
+};
+
+export default Footer;
